@@ -69,6 +69,14 @@ public class CoffeeOrderTest {
         assertThat(coffeeOrder.price()).isEqualTo(135);
     }
     
+    @Test
+    public void largeCoffeeAndHalfNHalfIs235() throws Exception {
+        coffeeOrder.coffeeSize("large");
+        coffeeOrder.creamer("half-n-half");
+        assertThat(coffeeOrder.price()).isEqualTo(235);
+    }
+    
+    
     
 
 
