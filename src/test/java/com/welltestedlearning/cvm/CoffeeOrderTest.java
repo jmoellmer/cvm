@@ -49,4 +49,11 @@ public class CoffeeOrderTest {
         assertThat(coffeeOrder.price()).isEqualTo(35);
     }
 
+    @Test
+    public void noneCreamerIs0() throws Exception {
+        coffeeOrder.creamer("");
+        assertThat(coffeeOrder.price()).isEqualTo(0);
+    }
+
+
 }
