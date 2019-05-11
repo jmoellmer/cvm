@@ -31,4 +31,11 @@ public class CoffeeOrderTest {
         assertThat(_coffeeOrder.price()).isEqualTo(200);
     }
 
+    @Test
+    public void emptyCoffeeIs0() throws Exception {
+        _coffeeOrder.coffeeSize("");
+        assertThat(_coffeeOrder.price()).isEqualTo(0);
+    }
+
+
 }
