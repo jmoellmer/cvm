@@ -20,9 +20,12 @@ class CoffeeOrder {
     void creamer(String creamer) {
         switch (creamer) {
             case "milk": _price = 25; break;
+            case "half-n-half": _price = 35; break;
             default: _price = 0;
         }
     }
+
+
 
     int price() {
         return _price;

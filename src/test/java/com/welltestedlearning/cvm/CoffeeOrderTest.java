@@ -43,6 +43,10 @@ public class CoffeeOrderTest {
         assertThat(coffeeOrder.price()).isEqualTo(25);
     }
 
-
+    @Test
+    public void halfNHalfCreamerIs35() throws Exception {
+        coffeeOrder.creamer("half-n-half");
+        assertThat(coffeeOrder.price()).isEqualTo(35);
+    }
 
 }
