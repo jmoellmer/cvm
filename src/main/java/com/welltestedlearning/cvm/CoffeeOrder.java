@@ -1,14 +1,14 @@
 package com.welltestedlearning.cvm;
 
-public class CoffeeOrder {
+class CoffeeOrder {
     private CoffeeOrder() {
     }
 
-    public static CoffeeOrder getInstance() {
+    static CoffeeOrder getInstance() {
         return new CoffeeOrder();
     }
 
-    public void coffeeSize(String size) {
+    void coffeeSize(String size) {
         switch (size) {
             case "small": _price = 100; break;
             case "medium": _price = 150; break;
@@ -17,7 +17,7 @@ public class CoffeeOrder {
         }
     }
 
-    public int price() {
+    int price() {
         return _price;
     }
 
