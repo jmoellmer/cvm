@@ -54,6 +54,14 @@ public class CoffeeOrderTest {
         coffeeOrder.creamer("");
         assertThat(coffeeOrder.price()).isEqualTo(0);
     }
+    
+    @Test
+    public void mediumCoffeeAndMilkCreamerIs175() throws Exception {
+        coffeeOrder.coffeeSize("medium");
+        coffeeOrder.creamer("milk");
+        assertThat(coffeeOrder.price()).isEqualTo(175);
+    }
+    
 
 
 }
