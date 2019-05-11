@@ -16,10 +16,10 @@ class CoffeeOrder {
             System.out.println("No such coffee size as " + size);
 
         switch (size) {
-            case "small": _price += 100; break;
-            case "medium": _price += 150; break;
-            case "large": _price += 200; break;
-            case "": _price += 0;
+            case "small": price += 100; break;
+            case "medium": price += 150; break;
+            case "large": price += 200; break;
+            default: price += 0; break;
         }
     }
 
@@ -30,15 +30,15 @@ class CoffeeOrder {
             System.out.println("No such coffee size as " + creamer);
 
         switch (creamer) {
-            case "milk": _price += 25; break;
-            case "half-n-half": _price += 35; break;
-            default: _price += 0;
+            case "milk": price += 25; break;
+            case "half-n-half": price += 35; break;
+            default: price += 0; break;
         }
     }
 
     int price() {
-        return _price;
+        return price;
     }
 
-    private int _price = 0;
+    private int price = 0;
 }
