@@ -5,7 +5,7 @@ class CoffeeOrder {
     private int price = 0;
 
     public void coffeeSize(String size) {
-        CoffeeSize coffeeSize = new CoffeeSize(size);
+        Size coffeeSize = new Size(size);
         price += coffeeSize.price();
     }
 
