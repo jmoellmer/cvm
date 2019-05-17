@@ -4,35 +4,38 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CoffeeOrderCreamerTests {
+public class CoffeeOrderTests {
 
     @Test
-    public void milkCreamerIs25() throws Exception {
+    public void mediumCoffeeAndMilkCreamerIs175() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
+        coffeeOrder.coffeeSize("medium");
         coffeeOrder.creamer("milk");
 
         assertThat(coffeeOrder.price())
-                .isEqualTo(25);
+                .isEqualTo(175);
     }
 
     @Test
-    public void halfNHalfCreamerIs35() throws Exception {
+    public void smallCoffeeAndHalfNHalfCreamerIs135() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
+        coffeeOrder.coffeeSize("small");
         coffeeOrder.creamer("half-n-half");
 
         assertThat(coffeeOrder.price())
-                .isEqualTo(35);
+                .isEqualTo(135);
     }
 
     @Test
-    public void noneCreamerIs0() throws Exception {
+    public void largeCoffeeAndHalfNHalfIs235() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.creamer("");
+        coffeeOrder.coffeeSize("large");
+        coffeeOrder.creamer("half-n-half");
 
         assertThat(coffeeOrder.price())
-                .isZero();
+                .isEqualTo(235);
     }
 }

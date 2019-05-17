@@ -3,7 +3,7 @@ package com.welltestedlearning.cvm;
 import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CoffeeOrderSizeTests {
+public class SizeTests {
 
     @Test
     public void smallCoffeeIs100() throws Exception {
