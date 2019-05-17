@@ -9,7 +9,7 @@ public class SizeTests {
     public void smallCoffeeIs100() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.coffeeSize("small");
+        coffeeOrder.addCoffee("small");
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(100);
@@ -19,7 +19,7 @@ public class SizeTests {
     public void mediumCoffeeIs150() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.coffeeSize("medium");
+        coffeeOrder.addCoffee("medium");
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(150);
@@ -29,7 +29,7 @@ public class SizeTests {
     public void largeCoffeeIs200() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.coffeeSize("large");
+        coffeeOrder.addCoffee("large");
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(200);
@@ -39,7 +39,7 @@ public class SizeTests {
     public void emptyCoffeeIs0() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.coffeeSize("");
+        coffeeOrder.addCoffee("");
 
         assertThat(coffeeOrder.price())
                 .isZero();
