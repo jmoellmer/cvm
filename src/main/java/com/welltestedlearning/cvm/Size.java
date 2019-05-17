@@ -3,13 +3,14 @@ package com.welltestedlearning.cvm;
 public class Size {
 
     private String size;
-    private int price = 0;
 
     public Size(String size) {
         this.size = size;
     }
 
     public int price() {
+
+        int price = 0;
 
         if (size.isEmpty()) {
             System.out.println("No coffee size selected");
