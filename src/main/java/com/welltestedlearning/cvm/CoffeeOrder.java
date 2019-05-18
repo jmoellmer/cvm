@@ -5,7 +5,7 @@ import java.util.List;
 
 class CoffeeOrder {
 
-    List<CoffeeItem> coffeeItems = new ArrayList<>();
+    private List<CoffeeItem> coffeeItems = new ArrayList<>();
 
     public void addCoffee(String size) {
         coffeeItems.add(new Size(size));
@@ -14,6 +14,8 @@ class CoffeeOrder {
     public void addCreamer(String creamer) {
         coffeeItems.add(new Creamer(creamer));
     }
+
+    public void addSweetener(String sweetener) { coffeeItems.add(new Sweetener(sweetener)); }
 
     public int price() {
         int coffeePrice = 0;
