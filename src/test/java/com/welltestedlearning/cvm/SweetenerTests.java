@@ -30,7 +30,7 @@ public class SweetenerTests {
     public void splendaSweetenerIs15() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.addSweetener("sugar");
+        coffeeOrder.addSweetener("splenda");
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(15);
