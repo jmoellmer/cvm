@@ -38,4 +38,29 @@ public class CoffeeOrderTests {
         assertThat(coffeeOrder.price())
                 .isEqualTo(235);
     }
+
+    @Test
+    public void largeCoffeeAndHalfNHalfAndSugarIs245() throws Exception {
+        CoffeeOrder coffeeOrder = new CoffeeOrder();
+
+        coffeeOrder.addCoffee("large");
+        coffeeOrder.addCreamer("half-n-half");
+        coffeeOrder.addSweetener("sugar");
+
+        assertThat(coffeeOrder.price())
+                .isEqualTo(245);
+    }
+
+    @Test
+    public void largeCoffeeAndHalfNHalfAndSplendaIs250() throws Exception {
+        CoffeeOrder coffeeOrder = new CoffeeOrder();
+
+        coffeeOrder.addCoffee("large");
+        coffeeOrder.addCreamer("half-n-half");
+        coffeeOrder.addSweetener("splenda");
+
+        assertThat(coffeeOrder.price())
+                .isEqualTo(250);
+    }
+
 }
