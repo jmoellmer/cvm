@@ -7,13 +7,24 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class SweetenerTests {
 
     @Test
-    public void noneSweetnerIs0() throws Exception {
+    public void noneSweetenerIs0() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.addSweetener("None");
+        coffeeOrder.addSweetener("none");
 
         assertThat(coffeeOrder.price())
                 .isZero();
     }
+    
+    @Test
+    public void sugarSweetenerIs10() throws Exception {
+        CoffeeOrder coffeeOrder = new CoffeeOrder();
+
+        coffeeOrder.addSweetener("sugar");
+
+        assertThat(coffeeOrder.price())
+                .isEqualTo(10);
+    }
+    
     
 }
