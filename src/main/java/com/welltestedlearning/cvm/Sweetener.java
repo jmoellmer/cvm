@@ -16,6 +16,9 @@ public class Sweetener extends CoffeeItem {
             case "sugar":
                 price += 10;
                 break;
+            case "splenda":
+                price += 15;
+                break;
             default:
                 break;
         }

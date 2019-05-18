@@ -26,5 +26,14 @@ public class SweetenerTests {
                 .isEqualTo(10);
     }
     
-    
+    @Test
+    public void splendaSweetenerIs15() throws Exception {
+        CoffeeOrder coffeeOrder = new CoffeeOrder();
+
+        coffeeOrder.addSweetener("sugar");
+
+        assertThat(coffeeOrder.price())
+                .isEqualTo(15);
+    }
+
 }
