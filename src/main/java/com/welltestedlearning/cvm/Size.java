@@ -1,22 +1,23 @@
 package com.welltestedlearning.cvm;
 
-public class Size {
+public class Size extends CoffeeItem {
 
     private String size;
 
     public Size(String size) {
-        this.size = size;
-    }
-
-    public int price() {
-
-        int price = 0;
 
         if (size.isEmpty()) {
             System.out.println("No coffee size selected");
         } else if (!size.equals("small") && !size.equals("medium") && !size.equals("large")) {
             System.out.println("No such coffee size as " + size);
         }
+
+        this.size = size;
+    }
+
+    public int price() {
+
+        int price = 0;
 
         switch (size) {
             case "small":

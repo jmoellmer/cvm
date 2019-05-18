@@ -1,21 +1,22 @@
 package com.welltestedlearning.cvm;
 
-public class Creamer {
+public class Creamer extends CoffeeItem {
 
     private String creamer;
 
     public Creamer(String creamer) {
-        this.creamer = creamer;
-    }
-
-    public int price() {
-        int price = 0;
 
         if (creamer.isEmpty()) {
             System.out.println("No creamer coffeeSize selected");
         } else if (!creamer.equals("milk") && !creamer.equals("half-n-half")) {
             System.out.println("No such coffee coffeeSize as " + creamer);
         }
+
+        this.creamer = creamer;
+    }
+
+    public int price() {
+        int price = 0;
 
         switch (creamer) {
             case "milk":
