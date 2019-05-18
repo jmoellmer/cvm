@@ -1,20 +1,25 @@
 package com.welltestedlearning.cvm;
 
+import java.util.ArrayList;
+import java.util.List;
+
 class CoffeeOrder {
 
-    private int totalPrice = 0;
+    List<CoffeeItem> coffeeItems = new ArrayList<>();
 
     public void addCoffee(String size) {
-        Size coffeeSize = new Size(size);
-        totalPrice += coffeeSize.price();
+        coffeeItems.add(new Size(size));
     }
 
     public void addCreamer(String creamer) {
-        Creamer coffeeCreamer = new Creamer(creamer);
-        totalPrice += coffeeCreamer.price();
+        coffeeItems.add(new Creamer(creamer));
     }
 
     public int price() {
-        return totalPrice;
+        int coffeePrice = 0;
+        for (CoffeeItem coffeeItem : coffeeItems) {
+            coffeePrice += coffeeItem.price();
+        }
+        return coffeePrice;
     }
 }
