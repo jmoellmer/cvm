@@ -10,8 +10,8 @@ public class CoffeeOrderTests {
     public void mediumCoffeeAndMilkCreamerIs175() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.coffeeSize("medium");
-        coffeeOrder.creamer("milk");
+        coffeeOrder.addCoffee("medium");
+        coffeeOrder.addCreamer("milk");
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(175);
@@ -21,8 +21,8 @@ public class CoffeeOrderTests {
     public void smallCoffeeAndHalfNHalfCreamerIs135() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.coffeeSize("small");
-        coffeeOrder.creamer("half-n-half");
+        coffeeOrder.addCoffee("small");
+        coffeeOrder.addCreamer("half-n-half");
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(135);
@@ -32,8 +32,8 @@ public class CoffeeOrderTests {
     public void largeCoffeeAndHalfNHalfIs235() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.coffeeSize("large");
-        coffeeOrder.creamer("half-n-half");
+        coffeeOrder.addCoffee("large");
+        coffeeOrder.addCreamer("half-n-half");
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(235);

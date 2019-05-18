@@ -10,7 +10,7 @@ public class CreamerTests {
     public void milkCreamerIs25() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.creamer("milk");
+        coffeeOrder.addCreamer("milk");
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(25);
@@ -20,7 +20,7 @@ public class CreamerTests {
     public void halfNHalfCreamerIs35() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.creamer("half-n-half");
+        coffeeOrder.addCreamer("half-n-half");
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(35);
@@ -30,7 +30,7 @@ public class CreamerTests {
     public void noneCreamerIs0() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.creamer("");
+        coffeeOrder.addCreamer("");
 
         assertThat(coffeeOrder.price())
                 .isZero();

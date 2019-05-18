@@ -2,19 +2,19 @@ package com.welltestedlearning.cvm;
 
 class CoffeeOrder {
 
-    private int price = 0;
+    private int totalPrice = 0;
 
-    public void coffeeSize(String size) {
+    public void addCoffee(String size) {
         Size coffeeSize = new Size(size);
-        price += coffeeSize.price();
+        totalPrice += coffeeSize.price();
     }
 
-    public void creamer(String creamer) {
+    public void addCreamer(String creamer) {
         Creamer coffeeCreamer = new Creamer(creamer);
-        price += coffeeCreamer.price();
+        totalPrice += coffeeCreamer.price();
     }
 
     public int price() {
-        return price;
+        return totalPrice;
     }
 }
