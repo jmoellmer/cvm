@@ -5,6 +5,11 @@ public class Sweetener extends CoffeeItem {
     private String sweetener;
 
     public Sweetener(String sweetener) {
+        if (sweetener.isEmpty() || sweetener.equals("none")) {
+            System.out.println("No coffee size selected");
+        } else if (!sweetener.equals("sugar") && !sweetener.equals("splenda")) {
+            System.out.println("No such coffee size as " + sweetener);
+        }
         this.sweetener = sweetener;
     }
 
