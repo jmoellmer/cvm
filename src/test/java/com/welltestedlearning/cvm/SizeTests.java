@@ -36,6 +36,16 @@ public class SizeTests {
     }
 
     @Test
+    public void xlCoffeeIs300() throws Exception {
+        CoffeeOrder coffeeOrder = new CoffeeOrder();
+
+        coffeeOrder.addCoffee("xl");
+
+        assertThat(coffeeOrder.price())
+                .isEqualTo(300);
+    }
+
+    @Test
     public void emptyCoffeeIs0() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 

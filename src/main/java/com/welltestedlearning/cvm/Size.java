@@ -29,6 +29,9 @@ public class Size extends CoffeeItem {
             case "large":
                 price += 200;
                 break;
+            case "xl":
+                price += 300;
+                break;
             default:
                 break;
         }
