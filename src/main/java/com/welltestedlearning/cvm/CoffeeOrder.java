@@ -29,4 +29,12 @@ class CoffeeOrder {
         }
         return coffeePrice;
     }
+
+    public String display() {
+        String displayString = "";
+        for (CoffeeItem coffeeItem : coffeeItems) {
+            displayString += coffeeItem.display();
+        }
+        return displayString;
+    }
 }

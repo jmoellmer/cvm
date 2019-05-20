@@ -15,27 +15,48 @@ public class Size extends CoffeeItem {
         this.size = size;
     }
 
+    @Override
     public int price() {
-
-        int price = 0;
 
         switch (size) {
             case "small":
-                price += 100;
+                super.price += 100;
                 break;
             case "medium":
-                price += 150;
+                super.price += 150;
                 break;
             case "large":
-                price += 200;
+                super.price += 200;
                 break;
             case "xl":
-                price += 300;
+                super.price += 300;
                 break;
             default:
                 break;
         }
 
-        return price;
+        return super.price;
+    }
+
+    @Override
+    public String display() {
+        switch (size) {
+            case "small":
+                super.display = "Small";
+                break;
+            case "medium":
+                super.display = "Medium";
+                break;
+            case "large":
+                super.display = "Large";
+                break;
+            case "xl":
+                super.display = "XL";
+                break;
+            default:
+                break;
+        }
+
+        return "Size: " + super.display;
     }
 }

@@ -55,4 +55,43 @@ public class SizeTests {
                 .isZero();
     }
 
+    @Test
+    public void smallDisplayIsSizeSmall() throws Exception {
+        CoffeeOrder coffeeOrder = new CoffeeOrder();
+
+        coffeeOrder.addCoffee("small");
+
+        assertThat(coffeeOrder.display())
+                .isEqualTo("Size: Small");
+    }
+
+    @Test
+    public void mediumDisplayIsSizeMedium() throws Exception {
+        CoffeeOrder coffeeOrder = new CoffeeOrder();
+
+        coffeeOrder.addCoffee("medium");
+
+        assertThat(coffeeOrder.display())
+                .isEqualTo("Size: Medium");
+    }
+
+    @Test
+    public void  largeDisplayIsSizeLarge() throws Exception {
+        CoffeeOrder coffeeOrder = new CoffeeOrder();
+
+        coffeeOrder.addCoffee("large");
+
+        assertThat(coffeeOrder.display())
+                .isEqualTo("Size: Large");
+    }
+    @Test
+    public void xlDisplayIsSizeXL() throws Exception {
+        CoffeeOrder coffeeOrder = new CoffeeOrder();
+
+        coffeeOrder.addCoffee("xl");
+
+        assertThat(coffeeOrder.display())
+                .isEqualTo("Size: XL");
+    }
+
 }
