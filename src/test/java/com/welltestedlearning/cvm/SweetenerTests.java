@@ -43,7 +43,7 @@ public class SweetenerTests {
         coffeeOrder.addSweetener("sugar");
 
         assertThat(coffeeOrder.display())
-                .isEqualTo("Sweetener: Sugar\nPrice: 10\n");
+                .isEqualTo("Sweetener: Sugar\nPrice: $0.10\n");
     }
 
     @Test
@@ -53,7 +53,7 @@ public class SweetenerTests {
         coffeeOrder.addSweetener("splenda");
 
         assertThat(coffeeOrder.display())
-                .isEqualTo("Sweetener: Splenda\nPrice: 15\n");
+                .isEqualTo("Sweetener: Splenda\nPrice: $0.15\n");
     }
 
 }

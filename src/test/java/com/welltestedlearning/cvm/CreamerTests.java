@@ -43,7 +43,7 @@ public class CreamerTests {
         coffeeOrder.addCreamer("milk");
 
         assertThat(coffeeOrder.display())
-                .isEqualTo("Creamer: Milk\nPrice: 25\n");
+                .isEqualTo("Creamer: Milk\nPrice: $0.25\n");
     }
 
     @Test
@@ -53,7 +53,7 @@ public class CreamerTests {
         coffeeOrder.addCreamer("half-n-half");
 
         assertThat(coffeeOrder.display())
-                .isEqualTo("Creamer: Half-N-Half\nPrice: 35\n");
+                .isEqualTo("Creamer: Half-N-Half\nPrice: $0.35\n");
     }
 
 }

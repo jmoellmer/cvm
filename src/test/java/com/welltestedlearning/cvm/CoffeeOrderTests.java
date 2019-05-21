@@ -72,7 +72,7 @@ public class CoffeeOrderTests {
         coffeeOrder.addSweetener("sugar");
 
         assertThat(coffeeOrder.display())
-                .isEqualTo("Size: Medium\nCreamer: Milk\nSweetener: Sugar\nPrice: 185\n");
+                .isEqualTo("Size: Medium\nCreamer: Milk\nSweetener: Sugar\nPrice: $1.85\n");
     }
 
 }

@@ -42,8 +42,9 @@ class CoffeeOrder {
     }
 
     private String priceString() {
-        int dollars = price() / 100;
-        int cents = price() % 100;
+        int total = price();
+        int dollars = total / 100;
+        int cents = total % 100;
         String strCents = String.valueOf(cents);
 
         if (cents == 0) {
