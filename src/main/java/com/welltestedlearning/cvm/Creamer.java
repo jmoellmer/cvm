@@ -16,7 +16,6 @@ public class Creamer extends CoffeeItem {
     }
 
     public int price() {
-        int price = 0;
 
         switch (creamer) {
             case "milk":
@@ -34,18 +33,19 @@ public class Creamer extends CoffeeItem {
 
     @Override
     public String display() {
+        
         switch (creamer) {
             case "milk":
-                super.display = "Milk";
+                display = "Milk";
                 break;
             case "half-n-half":
-                super.display = "Half-N-Half";
+                display = "Half-N-Half";
                 break;
             default:
                 break;
         }
 
-        return "Creamer: " + super.display;
+        return "Creamer: " + display;
     }
 
 }

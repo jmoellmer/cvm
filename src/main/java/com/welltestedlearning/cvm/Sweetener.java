@@ -15,7 +15,6 @@ public class Sweetener extends CoffeeItem {
 
     @Override
     public int price() {
-        int price = 0;
 
         switch (sweetener) {
             case "sugar":
@@ -33,18 +32,19 @@ public class Sweetener extends CoffeeItem {
 
     @Override
     public String display() {
+
         switch (sweetener) {
             case "sugar":
-                super.display = "Sugar";
+                display = "Sugar";
                 break;
             case "splenda":
-                super.display = "Splenda";
+                display = "Splenda";
                 break;
             default:
                 break;
         }
 
-        return "Sweetener: " + super.display;
+        return "Sweetener: " + display;
     }
 
 }
