@@ -35,4 +35,25 @@ public class CreamerTests {
         assertThat(coffeeOrder.price())
                 .isZero();
     }
+
+    @Test
+    public void milkDisplayIsCreamerMilk() throws Exception {
+        CoffeeOrder coffeeOrder = new CoffeeOrder();
+
+        coffeeOrder.addCreamer("milk");
+
+        assertThat(coffeeOrder.display())
+                .isEqualTo("Creamer: Milk\n");
+    }
+
+    @Test
+    public void halfNHalfDisplayIsCreamerHalfNHalf() throws Exception {
+        CoffeeOrder coffeeOrder = new CoffeeOrder();
+
+        coffeeOrder.addCreamer("half-n-half");
+
+        assertThat(coffeeOrder.display())
+                .isEqualTo("Creamer: Half-N-Half\n");
+    }
+
 }

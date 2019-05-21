@@ -32,4 +32,20 @@ public class Creamer extends CoffeeItem {
         return price;
     }
 
+    @Override
+    public String display() {
+        switch (creamer) {
+            case "milk":
+                super.display = "Milk";
+                break;
+            case "half-n-half":
+                super.display = "Half-N-Half";
+                break;
+            default:
+                break;
+        }
+
+        return "Creamer: " + super.display;
+    }
+
 }
