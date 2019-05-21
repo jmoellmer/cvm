@@ -36,8 +36,22 @@ class CoffeeOrder {
             displayString += coffeeItem.display() + "\n";
         }
 
-        displayString += "Price: " + price() + "\n";
+        displayString += "Price: " + priceString() + "\n";
 
         return displayString;
+    }
+
+    private String priceString() {
+        int dollars = price() / 100;
+        int cents = price() % 100;
+        String strCents = String.valueOf(cents);
+
+        if (cents == 0) {
+            strCents += "0";
+        } else if (cents <= 9) {
+            strCents = "0" + strCents;
+        }
+
+        return "$" + dollars + "." + strCents;
     }
 }
