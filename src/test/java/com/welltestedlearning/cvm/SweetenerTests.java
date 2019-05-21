@@ -36,4 +36,24 @@ public class SweetenerTests {
                 .isEqualTo(15);
     }
 
+    @Test
+    public void sugarDisplayIsSweetenerSugar() throws Exception {
+        CoffeeOrder coffeeOrder = new CoffeeOrder();
+
+        coffeeOrder.addSweetener("sugar");
+
+        assertThat(coffeeOrder.display())
+                .isEqualTo("Sweetener: Sugar\nPrice: 10\n");
+    }
+
+    @Test
+    public void splendaDisplayIsSweetenerSplenda() throws Exception {
+        CoffeeOrder coffeeOrder = new CoffeeOrder();
+
+        coffeeOrder.addSweetener("splenda");
+
+        assertThat(coffeeOrder.display())
+                .isEqualTo("Sweetener: Splenda\nPrice: 15\n");
+    }
+
 }

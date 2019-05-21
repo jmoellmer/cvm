@@ -63,16 +63,16 @@ public class CoffeeOrderTests {
                 .isEqualTo(250);
     }
 
-//    @Test
-//    public void fullDisplayTest() throws Exception {
-//        CoffeeOrder coffeeOrder = new CoffeeOrder();
-//
-//        coffeeOrder.addCoffee("medium");
-//        coffeeOrder.addCreamer("milk");
-//        coffeeOrder.addSweetener("sugar");
-//
-//        assertThat(coffeeOrder.display())
-//                .isEqualTo("Size: Medium\nCreamer: Milk\nSweetener: Sugar\nPrice: 185\n");
-//    }
+    @Test
+    public void fullDisplayTest() throws Exception {
+        CoffeeOrder coffeeOrder = new CoffeeOrder();
+
+        coffeeOrder.addCoffee("medium");
+        coffeeOrder.addCreamer("milk");
+        coffeeOrder.addSweetener("sugar");
+
+        assertThat(coffeeOrder.display())
+                .isEqualTo("Size: Medium\nCreamer: Milk\nSweetener: Sugar\nPrice: 185\n");
+    }
 
 }

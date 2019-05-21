@@ -35,6 +35,9 @@ class CoffeeOrder {
         for (CoffeeItem coffeeItem : coffeeItems) {
             displayString += coffeeItem.display() + "\n";
         }
+
+        displayString += "Price: " + price() + "\n";
+
         return displayString;
     }
 }

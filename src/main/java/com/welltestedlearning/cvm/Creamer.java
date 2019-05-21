@@ -7,9 +7,9 @@ public class Creamer extends CoffeeItem {
     public Creamer(String creamer) {
 
         if (creamer.isEmpty()) {
-            System.out.println("No creamer coffeeSize selected");
+            System.out.println("No coffee creamer selected");
         } else if (!creamer.equals("milk") && !creamer.equals("half-n-half")) {
-            System.out.println("No such coffee coffeeSize as " + creamer);
+            System.out.println("No such coffee creamer as " + creamer);
         }
 
         this.creamer = creamer;

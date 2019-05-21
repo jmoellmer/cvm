@@ -62,7 +62,7 @@ public class SizeTests {
         coffeeOrder.addCoffee("small");
 
         assertThat(coffeeOrder.display())
-                .isEqualTo("Size: Small\n");
+                .isEqualTo("Size: Small\nPrice: 100\n");
     }
 
     @Test
@@ -72,7 +72,7 @@ public class SizeTests {
         coffeeOrder.addCoffee("medium");
 
         assertThat(coffeeOrder.display())
-                .isEqualTo("Size: Medium\n");
+                .isEqualTo("Size: Medium\nPrice: 150\n");
     }
 
     @Test
@@ -82,7 +82,7 @@ public class SizeTests {
         coffeeOrder.addCoffee("large");
 
         assertThat(coffeeOrder.display())
-                .isEqualTo("Size: Large\n");
+                .isEqualTo("Size: Large\nPrice: 200\n");
     }
     @Test
     public void xlDisplayIsSizeXL() throws Exception {
@@ -91,7 +91,7 @@ public class SizeTests {
         coffeeOrder.addCoffee("xl");
 
         assertThat(coffeeOrder.display())
-                .isEqualTo("Size: XL\n");
+                .isEqualTo("Size: XL\nPrice: 300\n");
     }
 
 }
