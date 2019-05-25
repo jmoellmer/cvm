@@ -8,52 +8,42 @@ public class CreamerTests {
 
     @Test
     public void milkCreamerIs25() throws Exception {
-        CoffeeOrder coffeeOrder = new CoffeeOrder();
+        Creamer creamer = new Creamer("milk");
 
-        coffeeOrder.addCreamer("milk");
-
-        assertThat(coffeeOrder.price())
+        assertThat(creamer.price())
                 .isEqualTo(25);
     }
 
     @Test
     public void halfNHalfCreamerIs35() throws Exception {
-        CoffeeOrder coffeeOrder = new CoffeeOrder();
+        Creamer creamer = new Creamer("half-n-half");
 
-        coffeeOrder.addCreamer("half-n-half");
-
-        assertThat(coffeeOrder.price())
+        assertThat(creamer.price())
                 .isEqualTo(35);
     }
 
     @Test
     public void noneCreamerIs0() throws Exception {
-        CoffeeOrder coffeeOrder = new CoffeeOrder();
+        Creamer creamer = new Creamer("");
 
-        coffeeOrder.addCreamer("");
-
-        assertThat(coffeeOrder.price())
+        assertThat(creamer.price())
                 .isZero();
     }
 
     @Test
     public void milkDisplayIsCreamerMilk() throws Exception {
-        CoffeeOrder coffeeOrder = new CoffeeOrder();
+        Creamer creamer = new Creamer("milk");
 
-        coffeeOrder.addCreamer("milk");
-
-        assertThat(coffeeOrder.display())
-                .isEqualTo("Creamer: Milk\nPrice: $0.25\n");
+        assertThat(creamer.display())
+                .isEqualTo("Creamer: Milk");
     }
 
     @Test
     public void halfNHalfDisplayIsCreamerHalfNHalf() throws Exception {
-        CoffeeOrder coffeeOrder = new CoffeeOrder();
+        Creamer creamer = new Creamer("half-n-half");
 
-        coffeeOrder.addCreamer("half-n-half");
-
-        assertThat(coffeeOrder.display())
-                .isEqualTo("Creamer: Half-N-Half\nPrice: $0.35\n");
+        assertThat(creamer.display())
+                .isEqualTo("Creamer: Half-N-Half");
     }
 
 }
