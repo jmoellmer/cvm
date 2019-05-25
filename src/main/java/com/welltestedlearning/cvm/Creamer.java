@@ -18,6 +18,8 @@ public class Creamer extends CoffeeItem {
     @Override
     public int price() {
 
+        int price = 0;
+
         switch (creamer) {
             case "milk":
                 price += 25;
@@ -34,7 +36,9 @@ public class Creamer extends CoffeeItem {
 
     @Override
     public String display() {
-        
+
+        String display = "";
+
         switch (creamer) {
             case "milk":
                 display = "Milk";

@@ -18,6 +18,8 @@ public class Size extends CoffeeItem {
     @Override
     public int price() {
 
+        int price = 0;
+
         switch (size) {
             case "small":
                 price += 100;
@@ -40,6 +42,8 @@ public class Size extends CoffeeItem {
 
     @Override
     public String display() {
+
+        String display = "";
 
         switch (size) {
             case "small":
