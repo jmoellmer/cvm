@@ -8,7 +8,8 @@ public class Size extends CoffeeItem {
 
         if (size.isEmpty()) {
             System.out.println("No coffee size selected");
-        } else if (!size.equals("small") && !size.equals("medium") && !size.equals("large")) {
+        } else if (!size.equals("small") && !size.equals("medium")
+                && !size.equals("large") && !size.equals("xl")) {
             System.out.println("No such coffee size as " + size);
         }
 
