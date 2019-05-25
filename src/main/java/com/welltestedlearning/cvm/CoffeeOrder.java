@@ -3,7 +3,7 @@ package com.welltestedlearning.cvm;
 import java.util.ArrayList;
 import java.util.List;
 
-class CoffeeOrder {
+public class CoffeeOrder {
 
     private List<CoffeeItem> coffeeItems = new ArrayList<>();
 
