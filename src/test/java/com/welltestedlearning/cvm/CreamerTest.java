@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CreamerTests {
+public class CreamerTest {
 
     @Test
     public void milkCreamerIs25() throws Exception {

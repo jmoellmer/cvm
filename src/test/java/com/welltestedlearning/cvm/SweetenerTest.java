@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class SweetenerTests {
+public class SweetenerTest {
 
     @Test
     public void noneSweetenerIs0() throws Exception {
