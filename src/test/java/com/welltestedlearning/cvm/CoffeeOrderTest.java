@@ -10,8 +10,8 @@ public class CoffeeOrderTest {
     public void mediumCoffeeAndMilkCreamerIs175() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.addCoffee("medium");
-        coffeeOrder.addCreamer("milk");
+        coffeeOrder.coffeeSize("medium");
+        coffeeOrder.creamer("milk");
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(175);
@@ -21,8 +21,8 @@ public class CoffeeOrderTest {
     public void smallCoffeeAndHalfNHalfCreamerIs135() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.addCoffee("small");
-        coffeeOrder.addCreamer("half-n-half");
+        coffeeOrder.coffeeSize("small");
+        coffeeOrder.creamer("half-n-half");
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(135);
@@ -32,8 +32,8 @@ public class CoffeeOrderTest {
     public void largeCoffeeAndHalfNHalfIs235() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.addCoffee("large");
-        coffeeOrder.addCreamer("half-n-half");
+        coffeeOrder.coffeeSize("large");
+        coffeeOrder.creamer("half-n-half");
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(235);
@@ -43,9 +43,9 @@ public class CoffeeOrderTest {
     public void largeCoffeeAndHalfNHalfAndSugarIs245() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.addCoffee("large");
-        coffeeOrder.addCreamer("half-n-half");
-        coffeeOrder.addSweetener("sugar");
+        coffeeOrder.coffeeSize("large");
+        coffeeOrder.creamer("half-n-half");
+        coffeeOrder.sweetener("sugar");
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(245);
@@ -55,9 +55,9 @@ public class CoffeeOrderTest {
     public void largeCoffeeAndHalfNHalfAndSplendaIs250() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.addCoffee("large");
-        coffeeOrder.addCreamer("half-n-half");
-        coffeeOrder.addSweetener("splenda");
+        coffeeOrder.coffeeSize("large");
+        coffeeOrder.creamer("half-n-half");
+        coffeeOrder.sweetener("splenda");
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(250);
@@ -67,9 +67,9 @@ public class CoffeeOrderTest {
     public void fullDisplayTest() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.addCoffee("medium");
-        coffeeOrder.addCreamer("milk");
-        coffeeOrder.addSweetener("sugar");
+        coffeeOrder.coffeeSize("medium");
+        coffeeOrder.creamer("milk");
+        coffeeOrder.sweetener("sugar");
 
         assertThat(coffeeOrder.display())
                 .isEqualTo("Size: Medium\nCreamer: Milk\nSweetener: Sugar\nPrice: $1.85\n");

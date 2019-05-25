@@ -10,7 +10,7 @@ public class SweetenerTest {
     public void noneSweetenerIs0() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.addSweetener("none");
+        coffeeOrder.sweetener("none");
 
         assertThat(coffeeOrder.price())
                 .isZero();
@@ -20,7 +20,7 @@ public class SweetenerTest {
     public void sugarSweetenerIs10() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.addSweetener("sugar");
+        coffeeOrder.sweetener("sugar");
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(10);
@@ -30,7 +30,7 @@ public class SweetenerTest {
     public void splendaSweetenerIs15() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.addSweetener("splenda");
+        coffeeOrder.sweetener("splenda");
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(15);
@@ -40,7 +40,7 @@ public class SweetenerTest {
     public void sugarDisplayIsSweetenerSugar() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.addSweetener("sugar");
+        coffeeOrder.sweetener("sugar");
 
         assertThat(coffeeOrder.display())
                 .isEqualTo("Sweetener: Sugar\nPrice: $0.10\n");
@@ -50,7 +50,7 @@ public class SweetenerTest {
     public void splendaDisplayIsSweetenerSplenda() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.addSweetener("splenda");
+        coffeeOrder.sweetener("splenda");
 
         assertThat(coffeeOrder.display())
                 .isEqualTo("Sweetener: Splenda\nPrice: $0.15\n");
