@@ -15,8 +15,16 @@ public class CoffeeOrder {
         coffeeItems.add(new Creamer(creamer));
     }
 
+    public void creamer(String creamer, int quantity) {
+        coffeeItems.add(new Creamer(creamer, quantity));
+    }
+
     public void sweetener(String sweetener) {
         coffeeItems.add(new Sweetener(sweetener));
+    }
+
+    public void sweetener(String sweetener, int quantity) {
+        coffeeItems.add(new Sweetener(sweetener, quantity));
     }
 
     public int price() {
