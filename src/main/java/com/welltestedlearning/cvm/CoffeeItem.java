@@ -2,7 +2,7 @@ package com.welltestedlearning.cvm;
 
 public interface CoffeeItem {
 
-    public int price();
+    int price();
 
-    public String display();
+    String display();
 }
