@@ -3,16 +3,32 @@ package com.welltestedlearning.cvm;
 public class Creamer implements CoffeeItem {
 
     private String creamer;
+    private int quantity;
 
     public Creamer(String creamer) {
 
+        validateCreamer(creamer);
+
+        this.creamer = creamer;
+
+        this.quantity = 1;
+    }
+
+    public Creamer(String creamer, int quantity) {
+
+        validateCreamer(creamer);
+
+        this.creamer = creamer;
+
+        this.quantity = quantity;
+    }
+
+    private void validateCreamer(String creamer) {
         if (creamer.isEmpty()) {
             System.out.println("No coffee creamer selected");
         } else if (!creamer.equals("milk") && !creamer.equals("half-n-half")) {
             System.out.println("No such coffee creamer as " + creamer);
         }
-
-        this.creamer = creamer;
     }
 
     @Override
@@ -31,7 +47,7 @@ public class Creamer implements CoffeeItem {
                 break;
         }
 
-        return price;
+        return quantity * price;
     }
 
     @Override

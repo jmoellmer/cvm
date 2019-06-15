@@ -46,4 +46,13 @@ public class CreamerTest {
                 .isEqualTo("Creamer: Half-N-Half");
     }
 
+    @Test
+    public void twoMilksCostIs50() throws Exception {
+        Creamer creamer = new Creamer("milk", 2);
+
+        assertThat(creamer.price())
+            .isEqualTo(50);
+    }
+    
+
 }
