@@ -1,12 +1,8 @@
 package com.welltestedlearning.cvm;
 
-public class CoffeeItem {
+public interface CoffeeItem {
 
-    public int price() {
-        return 0;
-    }
+    public int price();
 
-    public String display() {
-        return "";
-    }
+    public String display();
 }
