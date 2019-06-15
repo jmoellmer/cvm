@@ -45,5 +45,15 @@ public class SweetenerTest {
         assertThat(sweetener.display())
                 .isEqualTo("Sweetener: Splenda");
     }
+    
+    @Test
+    public void twoSugarsCostIs20() throws Exception {
+        Sweetener sweetener = new Sweetener("sugar", 2);
+
+        assertThat(sweetener.price())
+            .isEqualTo(20);
+
+    }
+    
 
 }

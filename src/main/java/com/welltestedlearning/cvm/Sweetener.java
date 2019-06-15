@@ -3,14 +3,26 @@ package com.welltestedlearning.cvm;
 public class Sweetener implements CoffeeItem {
 
     private String sweetener;
+    private int quantity;
 
     public Sweetener(String sweetener) {
+        validateSweetener(sweetener);
+        this.sweetener = sweetener;
+        this.quantity = 1;
+    }
+
+    public Sweetener(String sweetener, int quantity) {
+        validateSweetener(sweetener);
+        this.sweetener = sweetener;
+        this.quantity = quantity;
+    }
+
+    private void validateSweetener(String sweetener) {
         if (sweetener.isEmpty() || sweetener.equals("none")) {
             System.out.println("No coffee sweetener selected");
         } else if (!sweetener.equals("sugar") && !sweetener.equals("splenda")) {
             System.out.println("No such coffee sweetener as " + sweetener);
         }
-        this.sweetener = sweetener;
     }
 
     @Override
@@ -29,7 +41,7 @@ public class Sweetener implements CoffeeItem {
                 break;
         }
 
-        return price;
+        return quantity * price;
     }
 
     @Override
