@@ -6,14 +6,18 @@ public class Size implements CoffeeItem {
 
     public Size(String size) {
 
+        validateSize(size);
+
+        this.size = size;
+    }
+
+    private void validateSize(String size) {
         if (size.isEmpty()) {
             System.out.println("No coffee size selected");
         } else if (!size.equals("small") && !size.equals("medium")
                 && !size.equals("large") && !size.equals("xl")) {
             System.out.println("No such coffee size as " + size);
         }
-
-        this.size = size;
     }
 
     @Override
