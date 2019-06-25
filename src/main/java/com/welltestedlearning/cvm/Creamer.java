@@ -6,20 +6,12 @@ public class Creamer implements CoffeeItem {
     private int quantity;
 
     public Creamer(String creamer) {
-
-        validateCreamer(creamer);
-
-        this.creamer = creamer;
-
-        this.quantity = 1;
+        this(creamer, 1);
     }
 
     public Creamer(String creamer, int quantity) {
-
         validateCreamer(creamer);
-
         this.creamer = creamer;
-
         this.quantity = quantity;
     }
 

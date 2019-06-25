@@ -2,6 +2,7 @@ package com.welltestedlearning.cvm;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.lang.StringBuilder;
 
 public class CoffeeOrder {
 
@@ -36,14 +37,18 @@ public class CoffeeOrder {
     }
 
     public String display() {
-        String displayString = "";
+        StringBuilder displayString = new StringBuilder();
         for (CoffeeItem coffeeItem : coffeeItems) {
-            displayString += coffeeItem.display() + "\n";
+            displayString
+                    .append(coffeeItem.display())
+                    .append('\n');
         }
 
-        displayString += "Price: " + priceString() + "\n";
+        displayString.append("Price: ")
+                .append(priceString())
+                .append('\n');
 
-        return displayString;
+        return displayString.toString();
     }
 
     private String priceString() {

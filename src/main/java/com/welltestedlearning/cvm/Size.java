@@ -5,9 +5,7 @@ public class Size implements CoffeeItem {
     private String size;
 
     public Size(String size) {
-
         validateSize(size);
-
         this.size = size;
     }
 

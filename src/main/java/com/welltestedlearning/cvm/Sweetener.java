@@ -6,9 +6,7 @@ public class Sweetener implements CoffeeItem {
     private int quantity;
 
     public Sweetener(String sweetener) {
-        validateSweetener(sweetener);
-        this.sweetener = sweetener;
-        this.quantity = 1;
+        this(sweetener, 1);
     }
 
     public Sweetener(String sweetener, int quantity) {
