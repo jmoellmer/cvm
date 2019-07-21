@@ -1,7 +1,7 @@
 package com.welltestedlearning.cvm;
 
 public abstract class QuantityItem implements CoffeeItem {
-    private int quantity;
+    private final int quantity;
 
     public QuantityItem(int quantity) {
         this.quantity = quantity;
