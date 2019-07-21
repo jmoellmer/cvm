@@ -1,6 +1,6 @@
 package com.welltestedlearning.cvm;
 
-public class Creamer implements CoffeeItem {
+public class Creamer extends QuantityItem implements CoffeeItem {
 
     private String creamer;
     private int quantity;
@@ -24,7 +24,7 @@ public class Creamer implements CoffeeItem {
     }
 
     @Override
-    public int price() {
+    public int basePrice() {
 
         int price = 0;
 
