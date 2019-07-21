@@ -7,6 +7,7 @@ public abstract class QuantityItem implements CoffeeItem {
         this.quantity = quantity;
     }
 
+    @Override
     public int price() {
         return basePrice() * quantity;
     }
