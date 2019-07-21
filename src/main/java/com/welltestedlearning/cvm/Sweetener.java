@@ -23,7 +23,7 @@ public class Sweetener extends QuantityItem {
     }
 
     @Override
-    public int basePrice() {
+    protected int basePrice() {
 
         int price = 0;
 

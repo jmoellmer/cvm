@@ -12,5 +12,5 @@ public abstract class QuantityItem implements CoffeeItem {
         return basePrice() * quantity;
     }
 
-    public abstract int basePrice();
+    protected abstract int basePrice();
 }
