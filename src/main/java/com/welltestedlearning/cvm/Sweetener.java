@@ -9,9 +9,9 @@ public class Sweetener extends QuantityItem {
     }
 
     public Sweetener(String sweetener, int quantity) {
+        super(quantity);
         validateSweetener(sweetener);
         this.sweetener = sweetener;
-        this.quantity = quantity;
     }
 
     private void validateSweetener(String sweetener) {

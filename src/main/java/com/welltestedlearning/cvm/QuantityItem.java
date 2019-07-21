@@ -1,7 +1,11 @@
 package com.welltestedlearning.cvm;
 
 public abstract class QuantityItem implements CoffeeItem {
-    protected int quantity = 1;
+    private int quantity;
+
+    public QuantityItem(int quantity) {
+        this.quantity = quantity;
+    }
 
     public int price() {
         return basePrice() * quantity;

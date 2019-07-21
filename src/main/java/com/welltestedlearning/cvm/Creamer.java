@@ -9,9 +9,9 @@ public class Creamer extends QuantityItem {
     }
 
     public Creamer(String creamer, int quantity) {
+        super(quantity);
         validateCreamer(creamer);
         this.creamer = creamer;
-        this.quantity = quantity;
     }
 
     private void validateCreamer(String creamer) {
