@@ -1,6 +1,6 @@
 package com.welltestedlearning.cvm;
 
-public class Creamer extends QuantityItem implements CoffeeItem {
+public class Creamer extends QuantityItem {
 
     private String creamer;
 
