@@ -3,7 +3,6 @@ package com.welltestedlearning.cvm;
 public class Sweetener extends QuantityItem implements CoffeeItem {
 
     private String sweetener;
-    private int quantity;
 
     public Sweetener(String sweetener) {
         this(sweetener, 1);
@@ -39,7 +38,7 @@ public class Sweetener extends QuantityItem implements CoffeeItem {
                 break;
         }
 
-        return quantity * price;
+        return  price;
     }
 
     @Override
