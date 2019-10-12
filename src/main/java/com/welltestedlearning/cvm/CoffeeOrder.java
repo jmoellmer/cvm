@@ -8,7 +8,7 @@ public class CoffeeOrder {
 
     private List<CoffeeItem> coffeeItems = new ArrayList<>();
 
-    public void coffeeSize(String size) {
+    public void coffeeSize(SizeOption size) {
         coffeeItems.add(new Size(size));
     }
 

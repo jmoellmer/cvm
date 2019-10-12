@@ -2,20 +2,10 @@ package com.welltestedlearning.cvm;
 
 public class Size implements CoffeeItem {
 
-    private String size;
+    private SizeOption size;
 
-    public Size(String size) {
-        validateSize(size);
+    public Size(SizeOption size) {
         this.size = size;
-    }
-
-    private void validateSize(String size) {
-        if (size.isEmpty()) {
-            System.out.println("No coffee size selected");
-        } else if (!size.equals("small") && !size.equals("medium")
-                && !size.equals("large") && !size.equals("xl")) {
-            System.out.println("No such coffee size as " + size);
-        }
     }
 
     @Override
@@ -24,16 +14,16 @@ public class Size implements CoffeeItem {
         int price = 0;
 
         switch (size) {
-            case "small":
+            case SMALL:
                 price += 100;
                 break;
-            case "medium":
+            case MEDIUM:
                 price += 150;
                 break;
-            case "large":
+            case LARGE:
                 price += 200;
                 break;
-            case "xl":
+            case XL:
                 price += 300;
                 break;
             default:
@@ -45,26 +35,6 @@ public class Size implements CoffeeItem {
 
     @Override
     public String display() {
-
-        String display = "";
-
-        switch (size) {
-            case "small":
-                display = "Small";
-                break;
-            case "medium":
-                display = "Medium";
-                break;
-            case "large":
-                display = "Large";
-                break;
-            case "xl":
-                display = "XL";
-                break;
-            default:
-                break;
-        }
-
-        return "Size: " + display;
+        return "Size: " + size.toString();
     }
 }

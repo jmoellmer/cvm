@@ -10,7 +10,7 @@ public class CoffeeOrderTest {
     public void mediumCoffeeAndMilkCreamerIs175() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.coffeeSize("medium");
+        coffeeOrder.coffeeSize(SizeOption.MEDIUM);
         coffeeOrder.creamer("milk");
 
         assertThat(coffeeOrder.price())
@@ -21,7 +21,7 @@ public class CoffeeOrderTest {
     public void smallCoffeeAndHalfNHalfCreamerIs135() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.coffeeSize("small");
+        coffeeOrder.coffeeSize(SizeOption.SMALL);
         coffeeOrder.creamer("half-n-half");
 
         assertThat(coffeeOrder.price())
@@ -32,7 +32,7 @@ public class CoffeeOrderTest {
     public void largeCoffeeAndHalfNHalfIs235() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.coffeeSize("large");
+        coffeeOrder.coffeeSize(SizeOption.LARGE);
         coffeeOrder.creamer("half-n-half");
 
         assertThat(coffeeOrder.price())
@@ -43,7 +43,7 @@ public class CoffeeOrderTest {
     public void largeCoffeeAndHalfNHalfAndSugarIs245() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.coffeeSize("large");
+        coffeeOrder.coffeeSize(SizeOption.LARGE);
         coffeeOrder.creamer("half-n-half");
         coffeeOrder.sweetener("sugar");
 
@@ -55,7 +55,7 @@ public class CoffeeOrderTest {
     public void largeCoffeeAndHalfNHalfAndSplendaIs250() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.coffeeSize("large");
+        coffeeOrder.coffeeSize(SizeOption.LARGE);
         coffeeOrder.creamer("half-n-half");
         coffeeOrder.sweetener("splenda");
 
@@ -67,7 +67,7 @@ public class CoffeeOrderTest {
     public void fullDisplayTest() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.coffeeSize("medium");
+        coffeeOrder.coffeeSize(SizeOption.MEDIUM);
         coffeeOrder.creamer("milk");
         coffeeOrder.sweetener("sugar");
 
@@ -79,7 +79,7 @@ public class CoffeeOrderTest {
     public void smallCoffeeTwoMilksAndThreeSugarsCostIs180() throws Exception {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
-        coffeeOrder.coffeeSize("small");
+        coffeeOrder.coffeeSize(SizeOption.SMALL);
         coffeeOrder.creamer("milk", 2);
         coffeeOrder.sweetener("sugar", 3);
 
