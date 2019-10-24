@@ -2,24 +2,15 @@ package com.welltestedlearning.cvm;
 
 public class Sweetener extends QuantityItem {
 
-    private String sweetener;
+    private SweetnerOption sweetener;
 
-    public Sweetener(String sweetener) {
+    public Sweetener(SweetnerOption sweetener) {
         this(sweetener, 1);
     }
 
-    public Sweetener(String sweetener, int quantity) {
+    public Sweetener(SweetnerOption sweetener, int quantity) {
         super(quantity);
-        validateSweetener(sweetener);
         this.sweetener = sweetener;
-    }
-
-    private void validateSweetener(String sweetener) {
-        if (sweetener.isEmpty() || sweetener.equals("none")) {
-            System.out.println("No coffee sweetener selected");
-        } else if (!sweetener.equals("sugar") && !sweetener.equals("splenda")) {
-            System.out.println("No such coffee sweetener as " + sweetener);
-        }
     }
 
     @Override
@@ -28,10 +19,10 @@ public class Sweetener extends QuantityItem {
         int price = 0;
 
         switch (sweetener) {
-            case "sugar":
+            case SUGAR:
                 price += 10;
                 break;
-            case "splenda":
+            case SPLENDA:
                 price += 15;
                 break;
             default:
@@ -47,10 +38,10 @@ public class Sweetener extends QuantityItem {
         String display = "";
 
         switch (sweetener) {
-            case "sugar":
+            case SUGAR:
                 display = "Sugar";
                 break;
-            case "splenda":
+            case SPLENDA:
                 display = "Splenda";
                 break;
             default:

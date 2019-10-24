@@ -7,7 +7,7 @@ public class CoffeeVendingMachine {
         CoffeeOrder coffeeOrder1 = new CoffeeOrder();
         coffeeOrder1.coffeeSize(SizeOption.MEDIUM);
         coffeeOrder1.creamer(CreamerOption.MILK);
-        coffeeOrder1.sweetener("sugar");
+        coffeeOrder1.sweetener(SweetnerOption.SUGAR);
         System.out.println(coffeeOrder1.display());
 
         CoffeeOrder coffeeOrder2 = new CoffeeOrder();
@@ -17,7 +17,7 @@ public class CoffeeVendingMachine {
 
         CoffeeOrder coffeeOrder3 = new CoffeeOrder();
         coffeeOrder3.coffeeSize(SizeOption.LARGE);
-        coffeeOrder3.sweetener("sugar");
+        coffeeOrder3.sweetener(SweetnerOption.SUGAR);
         System.out.println(coffeeOrder3.display());
 
     }

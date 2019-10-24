@@ -45,7 +45,7 @@ public class CoffeeOrderTest {
 
         coffeeOrder.coffeeSize(SizeOption.LARGE);
         coffeeOrder.creamer(CreamerOption.HALF_N_HALF);
-        coffeeOrder.sweetener("sugar");
+        coffeeOrder.sweetener(SweetnerOption.SUGAR);
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(245);
@@ -57,7 +57,7 @@ public class CoffeeOrderTest {
 
         coffeeOrder.coffeeSize(SizeOption.LARGE);
         coffeeOrder.creamer(CreamerOption.HALF_N_HALF);
-        coffeeOrder.sweetener("splenda");
+        coffeeOrder.sweetener(SweetnerOption.SPLENDA);
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(250);
@@ -69,7 +69,7 @@ public class CoffeeOrderTest {
 
         coffeeOrder.coffeeSize(SizeOption.MEDIUM);
         coffeeOrder.creamer(CreamerOption.MILK);
-        coffeeOrder.sweetener("sugar");
+        coffeeOrder.sweetener(SweetnerOption.SUGAR);
 
         assertThat(coffeeOrder.display())
                 .isEqualTo("Size: Medium\nCreamer: Milk\nSweetener: Sugar\nPrice: $1.85\n");
@@ -81,7 +81,7 @@ public class CoffeeOrderTest {
 
         coffeeOrder.coffeeSize(SizeOption.SMALL);
         coffeeOrder.creamer(CreamerOption.MILK, 2);
-        coffeeOrder.sweetener("sugar", 3);
+        coffeeOrder.sweetener(SweetnerOption.SUGAR, 3);
 
         assertThat(coffeeOrder.price())
             .isEqualTo(180);

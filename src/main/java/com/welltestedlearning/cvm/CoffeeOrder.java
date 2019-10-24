@@ -20,11 +20,11 @@ public class CoffeeOrder {
         coffeeItems.add(new Creamer(creamer, quantity));
     }
 
-    public void sweetener(String sweetener) {
+    public void sweetener(SweetnerOption sweetener) {
         coffeeItems.add(new Sweetener(sweetener));
     }
 
-    public void sweetener(String sweetener, int quantity) {
+    public void sweetener(SweetnerOption sweetener, int quantity) {
         coffeeItems.add(new Sweetener(sweetener, quantity));
     }
 

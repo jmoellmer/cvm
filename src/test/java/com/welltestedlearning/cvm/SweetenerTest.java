@@ -8,7 +8,7 @@ public class SweetenerTest {
 
     @Test
     public void noneSweetenerIs0() throws Exception {
-        Sweetener sweetener = new Sweetener("none");
+        Sweetener sweetener = new Sweetener(SweetnerOption.NONE);
 
         assertThat(sweetener.price())
                 .isZero();
@@ -16,7 +16,7 @@ public class SweetenerTest {
     
     @Test
     public void sugarSweetenerIs10() throws Exception {
-        Sweetener sweetener = new Sweetener("sugar");
+        Sweetener sweetener = new Sweetener(SweetnerOption.SUGAR);
 
         assertThat(sweetener.price())
                 .isEqualTo(10);
@@ -24,7 +24,7 @@ public class SweetenerTest {
 
     @Test
     public void splendaSweetenerIs15() throws Exception {
-        Sweetener sweetener = new Sweetener("splenda");
+        Sweetener sweetener = new Sweetener(SweetnerOption.SPLENDA);
 
         assertThat(sweetener.price())
                 .isEqualTo(15);
@@ -32,7 +32,7 @@ public class SweetenerTest {
 
     @Test
     public void sugarDisplayIsSweetenerSugar() throws Exception {
-        Sweetener sweetener = new Sweetener("sugar");
+        Sweetener sweetener = new Sweetener(SweetnerOption.SUGAR);
 
         assertThat(sweetener.display())
                 .isEqualTo("Sweetener: Sugar");
@@ -40,7 +40,7 @@ public class SweetenerTest {
 
     @Test
     public void splendaDisplayIsSweetenerSplenda() throws Exception {
-        Sweetener sweetener = new Sweetener("splenda");
+        Sweetener sweetener = new Sweetener(SweetnerOption.SPLENDA);
 
         assertThat(sweetener.display())
                 .isEqualTo("Sweetener: Splenda");
@@ -48,7 +48,7 @@ public class SweetenerTest {
     
     @Test
     public void twoSugarsCostIs20() throws Exception {
-        Sweetener sweetener = new Sweetener("sugar", 2);
+        Sweetener sweetener = new Sweetener(SweetnerOption.SUGAR, 2);
 
         assertThat(sweetener.price())
             .isEqualTo(20);
