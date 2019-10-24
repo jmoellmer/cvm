@@ -6,6 +6,8 @@ public enum SizeOption {
     @Override
     public String toString() {
         String name = name().toString();
-        return Character.toUpperCase(name.charAt(0)) +  name.substring(1).toLowerCase();
+        StringBuilder properName = new StringBuilder();
+        properName.append(Character.toUpperCase(name.charAt(0)));
+        return properName.append(name.substring(1).toLowerCase()).toString();
     }
 }
