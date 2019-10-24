@@ -12,11 +12,11 @@ public class CoffeeOrder {
         coffeeItems.add(new Size(size));
     }
 
-    public void creamer(String creamer) {
+    public void creamer(CreamerOption creamer) {
         coffeeItems.add(new Creamer(creamer));
     }
 
-    public void creamer(String creamer, int quantity) {
+    public void creamer(CreamerOption creamer, int quantity) {
         coffeeItems.add(new Creamer(creamer, quantity));
     }
 

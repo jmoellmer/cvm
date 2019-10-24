@@ -11,7 +11,7 @@ public class CoffeeOrderTest {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
         coffeeOrder.coffeeSize(SizeOption.MEDIUM);
-        coffeeOrder.creamer("milk");
+        coffeeOrder.creamer(CreamerOption.MILK);
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(175);
@@ -22,7 +22,7 @@ public class CoffeeOrderTest {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
         coffeeOrder.coffeeSize(SizeOption.SMALL);
-        coffeeOrder.creamer("half-n-half");
+        coffeeOrder.creamer(CreamerOption.HALF_N_HALF);
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(135);
@@ -33,7 +33,7 @@ public class CoffeeOrderTest {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
         coffeeOrder.coffeeSize(SizeOption.LARGE);
-        coffeeOrder.creamer("half-n-half");
+        coffeeOrder.creamer(CreamerOption.HALF_N_HALF);
 
         assertThat(coffeeOrder.price())
                 .isEqualTo(235);
@@ -44,7 +44,7 @@ public class CoffeeOrderTest {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
         coffeeOrder.coffeeSize(SizeOption.LARGE);
-        coffeeOrder.creamer("half-n-half");
+        coffeeOrder.creamer(CreamerOption.HALF_N_HALF);
         coffeeOrder.sweetener("sugar");
 
         assertThat(coffeeOrder.price())
@@ -56,7 +56,7 @@ public class CoffeeOrderTest {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
         coffeeOrder.coffeeSize(SizeOption.LARGE);
-        coffeeOrder.creamer("half-n-half");
+        coffeeOrder.creamer(CreamerOption.HALF_N_HALF);
         coffeeOrder.sweetener("splenda");
 
         assertThat(coffeeOrder.price())
@@ -68,7 +68,7 @@ public class CoffeeOrderTest {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
         coffeeOrder.coffeeSize(SizeOption.MEDIUM);
-        coffeeOrder.creamer("milk");
+        coffeeOrder.creamer(CreamerOption.MILK);
         coffeeOrder.sweetener("sugar");
 
         assertThat(coffeeOrder.display())
@@ -80,7 +80,7 @@ public class CoffeeOrderTest {
         CoffeeOrder coffeeOrder = new CoffeeOrder();
 
         coffeeOrder.coffeeSize(SizeOption.SMALL);
-        coffeeOrder.creamer("milk", 2);
+        coffeeOrder.creamer(CreamerOption.MILK, 2);
         coffeeOrder.sweetener("sugar", 3);
 
         assertThat(coffeeOrder.price())

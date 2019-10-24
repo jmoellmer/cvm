@@ -6,6 +6,15 @@ public enum CreamerOption {
     @Override
     public String toString() {
         String name = name().toString();
-        return Character.toUpperCase(name.charAt(0)) + name.substring(1).toLowerCase();
+
+        StringBuilder properName = new StringBuilder();
+        properName.append(Character.toUpperCase(name.charAt(0)));
+        properName.append(name.substring(1).toLowerCase());
+
+       if (name == "HALF_N_HALF") {
+           return properName.replace(4, 8, " & H").toString();
+       } else {
+           return properName.toString();
+       }
     }
 }

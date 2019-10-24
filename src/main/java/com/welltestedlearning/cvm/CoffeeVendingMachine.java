@@ -6,13 +6,13 @@ public class CoffeeVendingMachine {
 
         CoffeeOrder coffeeOrder1 = new CoffeeOrder();
         coffeeOrder1.coffeeSize(SizeOption.MEDIUM);
-        coffeeOrder1.creamer("milk");
+        coffeeOrder1.creamer(CreamerOption.MILK);
         coffeeOrder1.sweetener("sugar");
         System.out.println(coffeeOrder1.display());
 
         CoffeeOrder coffeeOrder2 = new CoffeeOrder();
         coffeeOrder2.coffeeSize(SizeOption.XL);
-        coffeeOrder2.creamer("milk");
+        coffeeOrder2.creamer(CreamerOption.MILK);
         System.out.println(coffeeOrder2.display());
 
         CoffeeOrder coffeeOrder3 = new CoffeeOrder();

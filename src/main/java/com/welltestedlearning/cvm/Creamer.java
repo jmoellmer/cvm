@@ -2,24 +2,15 @@ package com.welltestedlearning.cvm;
 
 public class Creamer extends QuantityItem {
 
-    private String creamer;
+    private CreamerOption creamer;
 
-    public Creamer(String creamer) {
+    public Creamer(CreamerOption creamer) {
         this(creamer, 1);
     }
 
-    public Creamer(String creamer, int quantity) {
+    public Creamer(CreamerOption creamer, int quantity) {
         super(quantity);
-        validateCreamer(creamer);
         this.creamer = creamer;
-    }
-
-    private void validateCreamer(String creamer) {
-        if (creamer.isEmpty()) {
-            System.out.println("No coffee creamer selected");
-        } else if (!creamer.equals("milk") && !creamer.equals("half-n-half")) {
-            System.out.println("No such coffee creamer as " + creamer);
-        }
     }
 
     @Override
@@ -28,10 +19,10 @@ public class Creamer extends QuantityItem {
         int price = 0;
 
         switch (creamer) {
-            case "milk":
+            case MILK:
                 price += 25;
                 break;
-            case "half-n-half":
+            case HALF_N_HALF:
                 price += 35;
                 break;
             default:
@@ -43,21 +34,7 @@ public class Creamer extends QuantityItem {
 
     @Override
     public String display() {
-
-        String display = "";
-
-        switch (creamer) {
-            case "milk":
-                display = "Milk";
-                break;
-            case "half-n-half":
-                display = "Half-N-Half";
-                break;
-            default:
-                break;
-        }
-
-        return "Creamer: " + display;
+        return "Creamer: " + creamer.toString();
     }
 
 }
